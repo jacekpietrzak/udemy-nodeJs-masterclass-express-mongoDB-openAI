@@ -1,0 +1,20 @@
+Creating data
+
+1. we will use addMovie route to add movie to db
+2. to work with mongo db we need to import mongoose to our controller
+3. to add data to our movies model we need to import movies model as well. But because we already initialized moviesModel in our main app.js we dont need to import that into our controller. Instead we can declare constant in controller
+    const moviesModel = mongoose.model('model_name') - we need to match model_name with a model name in our model
+4. Now we can create a record using this model. To create we use create method and pass an object with properties from request.
+    moviesModel.create({
+        movie_name,
+        info,
+        rating,
+    });
+5. lastly we learned that if we comunicate with db there is a delay with the execution. To handle the delay the best way is to use await statement and it needs to be asynchronous function.
+6. that way without response from await method the res.status wont be executed.
+7. Now we can use Postman to send a request and add data to mongoDB
+8. We can check added data in mongoDB Compass by refreshing the list.
+
+IMPORTANT
+9. If we are working with await function we always need to wrap it in try catch statement. That is because any await statement can throw errors or throw some exceptions. It can be due connection error or many ohter different factors. We need to handle those errors becouse otherway the server can crash. By handling error we prevent our server from crashing.
+10. Id we try to add different movie with more data that we wanted the server will crash but data will be added. That is because we logged createMovie outside try catch block. createMovie is declared in try catch block and is not available outside. We need to move it into try catch block.

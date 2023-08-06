@@ -1,0 +1,13 @@
+Code execution methods
+
+1. Asynchronous
+    - no bloking code. No code will wait for other code to execute.
+    - very fast no blocking
+
+    - If we want to use asynchronous way we need to use PROMISE = Async/Await. Promise in JS is like a guarantee for something in the future. Async/Await is a way for as to convert part of the code from Asynchronous executin type to Synchronous execution type. So we can have all of our code working in Asynchronous way (faster) and parts of the code have in Synchronous way.
+
+2. Synchronous
+    - JS executes the code from top to bottom. It executes line by line and waits to executes another until current is finished. 
+    - If some code is blocking execution because for instance it is fetching data from server the whole code below it will wait until the fetch is finished. 
+    - Every line of code is running in sync.
+

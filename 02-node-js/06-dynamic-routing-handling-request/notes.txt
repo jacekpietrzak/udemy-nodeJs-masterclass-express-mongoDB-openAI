@@ -1,0 +1,2 @@
+1. We need to detect what request are we getting so we can fulfill the request and provide response acordingly.
+2. there is an easier way to setup routing provided by express.

@@ -1,0 +1,4 @@
+removing data from db
+
+1. lets create a controller first for deleting movie.
+2. dont forget to make a return after each "res.status.." because you will get error code: 'ERR_HTTP_HEADERS_SENT'

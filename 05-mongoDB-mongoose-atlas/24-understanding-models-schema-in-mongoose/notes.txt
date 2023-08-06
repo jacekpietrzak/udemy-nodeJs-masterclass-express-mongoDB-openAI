@@ -1,0 +1,8 @@
+1. models is provided from mongoose.
+2. models are collections of schemas. Schemas are inside the model.
+    students - models
+    name, age, class - schemas
+3. schemas will define what type of data is allowed to certain column like name, age, class. for instance:
+    age: want allowed strings where numbers are only accpeted.
+4. moviesList - collection of movies = model,
+    id, movie_name, info, rating = schemas

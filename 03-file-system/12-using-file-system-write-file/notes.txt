@@ -1,0 +1,12 @@
+1. To write to a file we will use different route. We will rename /cars route to /write route. In this route we will use fs system to write a file.
+2.
+    fs.writeFile('directory/file', 'thing that you want to write to the file', error function (err)=>{
+        if (err) {
+            res.send('Error writing to file.');
+        }
+        res.send('Data written successfully');
+    } ) - in the callback function there is no data as there is nothing to read.
+3. we need to remove our last response that we don need anymore. We cant send res.send two times in our route becaouse data on the response is already sent.
+4. We wrote the data to the file but the problem is that we replaced the whole file. To preserve previous data and add new we need to use different command: appendFile. It will preserve current data and write new one next to the previous one.
+5. If we want for instance the new data to be in the new line we need to add to data to write '\n'
+6. With the append file and write file - if the fs module cant find the base file provided it will create a new file with the data provided.

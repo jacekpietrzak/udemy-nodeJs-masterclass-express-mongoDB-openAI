@@ -1,0 +1,5 @@
+1. We can delete index.js. We dont need it anymore.
+2. We will use nodemon so we dont need to restart our server manualy every time we do the change. Thanks to nodemon we will have it automatically.
+    2.1 npm install nodemon
+3. now we need to use nodemon to start our server. To do it we need to write new script in package.json.
+    3.1 "start": "nodemon app.js" - it nawigates to nodemon package and than executes app.js

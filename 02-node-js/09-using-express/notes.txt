@@ -1,0 +1,16 @@
+1. We will create an app.js file to write our server with express
+2. we need to import express   
+    2.1 const express = require('express')
+3. now we need to declare app which is equall to express    
+    3.1 const app = express()
+4. now we need to listen to a port and callback function if the port listening was successful
+    4.1 app.listen(PORT,()=>{ console.log('Server connected') })
+5. now we can run our app
+    5.1 node app.js
+6. now we will build routing system
+    6.1 we will write a route for '/' route which will expect res and provide wit req in the callback function. We will send the response in the function.
+        6.1.2   app.checkout('/', (req, res) => {
+                    res.send('hello from the server');
+                });
+7. to do dynamic routing with express is quite easy. We only need to declare rest of the routes.
+8. but if we will have thousands of routes we can esport those routes and keep them organized.

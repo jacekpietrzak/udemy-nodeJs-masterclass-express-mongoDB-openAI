@@ -1,0 +1,15 @@
+schema values
+
+1. It affects the way we create a data in DB.
+2. Lets provide a description as well.
+3. To send a new property - value we need to:
+    - add it to destructutre of our payload in controller
+    - add it to .create method in controller
+    - add it to the schema in a model file
+    - if there is no defined field in schema it will be ignored totaly.
+    - change of the schema will only affect newly created data. It wont affect existing data.
+4. if we want to have any field required we just need to add "required: true" field to schema
+    - by using this we are directly validating our data from the schema itself.
+    - if validation from mongoDB returns an error our server will crash. 
+    - if we want to have a custom error message than we need change our schema validation
+        -- "required: [true, "custom error message to throw while validation fails"]"

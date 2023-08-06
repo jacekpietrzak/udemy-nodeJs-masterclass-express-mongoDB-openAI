@@ -1,0 +1,14 @@
+Validation requests
+
+We will add validations to check if the client sent us data we want
+
+1. movie_name - we need to use return to be sure that after this check code wont go further and wont send multiple responses at once.
+     if (!movie_name) {
+        return res.status(400).json({
+            status: 'Bad request',
+            message: 'Movie name is required',
+        });
+    }
+2. we can do the same check for the rest.
+3. if all validations goes sucessfully it will sens res.status(200)
+4. in the next lesson we will see how we can do that without repeating our code. Using effectively Try catch method. Right now we are going against the philosophy DRY - Dont Repeat Yourself

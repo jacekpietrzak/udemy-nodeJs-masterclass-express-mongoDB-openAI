@@ -1,0 +1,11 @@
+1. if we see somehting in {somehting} it means it is dynamic 
+2. to post data we need to send a body with all required values. Body needs to be as raw and of type JSON
+3. Postman has a feature called Environments which helps in the development stage. It will help setup certain variables so we dont need to repeat ourselves
+4. Create an environen and name it.
+5. In this environment we can declare some variables to use 
+6. we will setup default url: 
+    6.1. variable: url
+    6.2. type: default
+    6.3. initial value: http://localhost:4000/api
+    6.4. current value: http://localhost:4000/api
+7. go to collections and switch No Environment to Dev Environment that we created.

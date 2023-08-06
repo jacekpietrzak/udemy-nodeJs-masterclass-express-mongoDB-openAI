@@ -1,0 +1,12 @@
+1. We will replicate server but for monoDB
+2. insteadd of writing all logic for routes in app.js we will create seperate folder for controllers.
+3. lets create routes in our project
+    3.1. first we will create a route for adding movie to DB beacuse we dont have any data to show so we need to create it.
+        app.post('/api/movies', addMovie);
+    3.2. lets create a logic for add movie route. We will create a addMovie.js in controllers folder and import it to app.js
+        const addMovie = (req, res) => {
+            res.status(200).json({
+                message: 'This is add movie route',
+            });
+        };
+        module.exports = addMovie;

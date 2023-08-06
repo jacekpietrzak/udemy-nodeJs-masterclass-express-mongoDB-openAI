@@ -1,0 +1,10 @@
+retriecing data
+
+1. To get a data from mongoDB we need to execute find() method
+2. To get all data from this model we dont need to pass any props to this method find()
+3. If we want to get all movies with a rating of 9 we need to:
+    .find({rating:9})
+4. to get the dynamic id/data from url we need to use "req.params". We will get an object of {url_param_key: url_param_value }. Whatever is in the url after "/:" will be sent as a key.
+5. find() will return the array of objects
+6. findOne() will return one object
+7. if there is no data as we are seraching as a return we will get null od undefined.

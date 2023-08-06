@@ -1,0 +1,27 @@
+mongoose call it models but mongoDB call it collections
+
+1. lets create new folder models
+2. in models lets create a model = movies.model.js
+    2.1. using .model.js is for easier search for models.
+    2.2. we can search by cmd + p
+    2.3. import mongoose in our model
+    2.4. create a model
+        const modelName = mongoose.model("nameOfModel",schema)
+    2.5. create schema object - we dont need to create id - mongoDB creates it automatically.
+        const moviesSchema = new mongoose.Schema({
+            key:{
+                type:
+                props...
+            }
+        })
+    2.6. export module.
+        module.exports = modelName
+3. create our database
+    3.1. we will create it by changing our mongoDB uri in .env file. We need to add name that we want our DB to have. We will add it in place of <DBname> .mongodb.net/<DBname>?retryWrites=true&w=majority
+    3.2. save the file and restart the server.
+    3.3. to create DB we need to initialize our model.
+        3.3.1. in app.js, below mongoose connection type
+            require('./models/movies.model');
+        3.3.2. restart the server
+        3.3.3. refresh MongoDB Compass and our new DB should be there.
+        3.3.4. in the database we should have our models

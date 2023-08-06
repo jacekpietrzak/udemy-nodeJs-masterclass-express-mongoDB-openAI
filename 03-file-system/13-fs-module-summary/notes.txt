@@ -1,0 +1,3 @@
+1. we can do much more with fs system. We can read about it on the documentation site. Thing is that we wont be using fs system to often.
+2. we use fs system to store the data, update data and other things to manipulate the data. But here we will learn how to use mongoDB for our data.
+3. In real world there is almost no system that uses fs system for its data.

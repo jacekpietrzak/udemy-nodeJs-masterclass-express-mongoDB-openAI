@@ -1,0 +1,1 @@
+1. API - Aplication Programing Interface - Like in the restaurant - API can be our waiter that is sending a request for food to the kitchen(database) and then serve the response to customer.

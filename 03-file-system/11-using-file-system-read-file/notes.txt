@@ -1,0 +1,13 @@
+1. allows node js to acces device files and folders. 
+2. we will create simple file data.txt
+3. if user goes to '/' we want to display data from data.txt insted of a greatting uisng fs system
+4. lets import fs to our project.
+    4.1 const fs = require('fs');
+5. we will read our file in the main route using fs
+    5.1 fs.readFile('directory/file', 'encoding', callback function (err,data)=>{
+        res.send(data)
+    } ) - if no error that data will be read and will be available in data.
+6. we need to remove our res.send that we had before and we will get our data in res.
+7. if we change smth in data.txt, nodemon wont restart our server automatically becouse it only watch app.js. We will do that later. We need to restart our server manualy to see changes or we can save app.js to restart the server.
+8. but what if we provide a file that does not exist? We will get nothing. We need to handle it with an error. In the route we will do:
+    

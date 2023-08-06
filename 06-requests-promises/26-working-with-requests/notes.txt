@@ -1,0 +1,21 @@
+mongoose call it models but mongoDB call it collections
+
+lets wrok on movie route
+1. We need to change our addMovie route to send data to mongoDB
+2. we can check what request we are getting
+    add console.log(req) to our route
+3. try send some data using postman to see data that we are getting.
+    3.1. change log to console.log(req.body)
+    3.2. we will get undefined - that is because express on default 3.3. doesnt accept JSON data.
+    3.4. to accept JSON data we will add in app.js after const app = express():
+        app.use(express.json()) - by doing that we tell express to accept json data as well.
+4. now we can take that data and send it to our mongoDB but we need to prepare some more things. 
+    4.1. We want to send only data that we need. To do that we can use desctructuring. By desctructuring we are using only data relevant to us.
+        const { movie_name, info, rating } = req.body;
+    4.2. lets create an object that we want to send in res.json
+        res.status(200).json({
+            message: 'This is add movie route',
+            movie_name,
+            info,
+            rating,
+        });

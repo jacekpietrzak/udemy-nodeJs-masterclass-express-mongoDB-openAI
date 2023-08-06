@@ -1,0 +1,6 @@
+1. Insted of using http We will use express to setup the routing, handling requests and providing response.
+2. Express is built on top of express module. It provides easier interface to handle requests and providing resposne. 
+3. We need to initialize npm first to create package.json
+    3.1 npm init
+4. now we need to install express
+    4.1 npm install express

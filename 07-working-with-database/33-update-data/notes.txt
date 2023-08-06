@@ -1,0 +1,8 @@
+update data in db
+
+1. for update request we usually use patch request.
+2. we are using json payload for update.
+3. we need to send an id
+4. to update our model we use .updateOne() method
+    .updateOne({whitch object}, {data to update}, {options})
+    - in options always use "runValidators: true" when updating data. So the send request will always be validated by schema that we have in model.

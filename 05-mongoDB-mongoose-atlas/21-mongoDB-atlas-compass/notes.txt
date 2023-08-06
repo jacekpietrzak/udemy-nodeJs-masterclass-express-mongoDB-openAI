@@ -1,0 +1,9 @@
+1. Lets integrate MongoDB as our database. We can create it locally or by using MongoDB cloud. Which is known as Atlas.
+2. create free account and new project and new database
+3. connect to database
+    3.1. click at connect
+    3.2. click drivers
+    3.3. copy connection string
+    3.4. replace password with <password> we created while creating db
+    3.5. open MongoDB Compass and create a new connection
+    

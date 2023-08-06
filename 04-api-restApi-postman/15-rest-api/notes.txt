@@ -1,0 +1,6 @@
+1. REST API is an API that has certain methodes of communicating with the server and the client. Clear rules for the communication.
+2. methods for REST API
+    2.1. GET - getting data for client
+    2.2. POST - keep data on the server
+    2.3. PUT - edit data on the server
+    2.4. DELETE - remove data from the server

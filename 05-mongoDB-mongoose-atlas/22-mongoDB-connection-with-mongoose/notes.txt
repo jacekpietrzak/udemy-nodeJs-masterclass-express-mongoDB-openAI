@@ -1,0 +1,16 @@
+1. Now we need to connect our app to mongoDB 
+2. we will use mongoose for connection
+    2.1. npm install mongoose
+3. import mongoose to app.js
+4. create a connection to mongoDB
+5. we will use .env to store our sensitive data.
+    5.0. install dotenv
+        npm i dotenv
+    5.1. create .env file
+    5.2. create a key MONGODB_URI in .env and assign our mongoDB connection uri to mongoDB
+    5.3. import dotenv to app.js
+        require('dotenv').config();
+    5.4. create a variable MONGODB_URI with our string
+        const MONGODB_URI = process.env.MONGODB_URI;
+    5.5. use this variable with mongoose.connect(MONGODB_URI,{})
+    5.6. create .gitignore and put there .env and node_modules. 
