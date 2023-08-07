@@ -1,0 +1,5 @@
+open ai account and prompts.
+
+1. Create open ai account
+2. create secret key and paste to .env
+3. configure openai with their documentation.

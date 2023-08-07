@@ -1,0 +1,24 @@
+prompting for movie recommendation based on movies in our movie model.
+
+1. Lets remove all movies from our db and insert movies that we like
+2. lets use openai to generate for us some movies
+    - we need list of all our movies - initialize mongoose
+        const moviesModel = mongoose.model('movies');
+    - get all movies from db
+        const allMovies = await moviesModel.find();
+    - get all titles from the db as an array and join this with ","
+        const moviesString = allMovies.map((el) => el.movie_name).join(",");
+    - now we can build a prompt with this.
+        const prompt = `I need a movie recommendation based on these movies: ${moviesString}. Provide me with 10 suggestions.`;
+    - and provide it to chat gpt 
+        const chatCompletion = await openai.createChatCompletion({
+            model: 'gpt-3.5-turbo',
+            messages: [{ role: 'user', content: prompt }],
+        });
+    - its good to provide max_tokens so we can get larger responses.
+        const chatCompletion = await openai.createChatCompletion({
+            model: 'gpt-3.5-turbo',
+            messages: [{ role: 'user', content: prompt }],
+            max_tokens: 100
+        });
+3. At the end we will wrap it all with try catch. Because we are usint await statement and if there is some issue we will crash our server.

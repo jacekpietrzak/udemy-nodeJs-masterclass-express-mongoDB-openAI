@@ -1,0 +1,8 @@
+open ai and node js
+
+We will learn about integrating openAi into our app and prompting ai for movies suggestions
+
+1. We will start by installing open ai
+    npm install openAi
+2. lets create a new controller to handle our openAi route.
+3. Lets create a route to handle openAi
