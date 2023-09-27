@@ -1,0 +1,35 @@
+Express Error Async 
+How we cam use this package for efectivly handling errors in node js app. By using this package we can speed up our development process because it will remove the hassle of wrapping our code in try catch everytime. 
+
+1. Install ExpressJS Async Errors
+    npm install express-async-errors --save
+2. lets initialize it directly to main app.js not in each route. It must be imported in the first line of the App before all other code. first line.
+    require('express-async-errors');
+3. After initialize it move to the part where declaring 
+    const app = express(); Below it we will import an errorHandler.
+4. Create a handlers folder
+5. Inside of it we will create errorHandler.js. We will use this errorHandler to handle all the errors in the app.
+    5.1. inside of it we will create errorHandler function
+        const errorHandler = () => {};
+    5.2. and export it
+        module.exports = errorHandler;
+    5.3. lets develop this function:
+        const errorHandler = (error, req, res, next) => {
+            // (error, req, res, next) these are 4 parameters that express will deliver to our handler.
+
+            if (error) {
+                res.status(400).json({
+                status: 'failed',
+                message: 'Something went wrong!',
+                });
+            } else {
+                next(); // this is allowing our app to move forward.
+        }
+};
+6. We need to import that errorHandler normaly
+    const errorHandler = require('./handlers/errorHandler');
+7. and use it as a midleware in app.js after all the routes. So if any route throws an error it will be handled by our errorHandler.
+        app.use(errorHandler)
+8. Now we are ready to remove all the try&catch blocks from our app.
+
+    
